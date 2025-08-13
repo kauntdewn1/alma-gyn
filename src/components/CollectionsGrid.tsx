@@ -2,19 +2,19 @@ const collections = [
   {
     titulo: 'Mais Vendidos',
     descricao: 'Os produtos favoritos dos nossos clientes',
-    img: '/mock-mais-vendidos.jpg',
+    img: '/mock-mais-vendidos.webp',
     tag: 'Popular'
   },
   {
     titulo: 'Linha Viagem',
     descricao: 'Acessórios essenciais para suas aventuras',
-    img: '/mock-viagem.jpg',
+    img: '/mock-viagem.webp',
     tag: 'Viagem'
   },
   {
     titulo: 'Para Escritório',
     descricao: 'Organização e estilo no ambiente profissional',
-    img: '/mock-escritorio.jpg',
+    img: '/mock-escritorio.webp',
     tag: 'Profissional'
   }
 ];

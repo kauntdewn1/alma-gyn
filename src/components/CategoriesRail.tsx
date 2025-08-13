@@ -1,10 +1,10 @@
 const categories = [
-  { nome: 'Viagem', img: '/cats/viagem.jpg' },
-  { nome: 'Escritório', img: '/cats/escritorio.jpg' },
-  { nome: 'Casa', img: '/cats/casa.jpg' },
-  { nome: 'Acessórios', img: '/cats/acessorios.jpg' },
-  { nome: 'Presentes', img: '/cats/presentes.jpg' },
-  { nome: 'Personalizados', img: '/cats/personalizados.jpg' }
+  { nome: 'Viagem', img: '/cats/viagem.webp' },
+  { nome: 'Escritório', img: '/cats/escritorio.webp' },
+  { nome: 'Casa', img: '/cats/casa.webp' },
+  { nome: 'Acessórios', img: '/cats/acessorios.webp' },
+  { nome: 'Presentes', img: '/cats/presentes.webp' },
+  { nome: 'Personalizados', img: '/cats/personalizados.webp' }
 ];
 
 export function CategoriesRail() {
