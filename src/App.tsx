@@ -1,12 +1,14 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SEO } from './SEO';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { CategoriesRail } from './components/CategoriesRail';
 import { CollectionsGrid } from './components/CollectionsGrid';
 import { ProductGrid } from './components/ProductGrid';
 import { FormPedido } from './components/FormPedido';
-import { Palette, Leaf, Factory, Truck, Mail, Instagram } from 'lucide-react';
+import { ProductPage } from './pages/ProductPage';
+import { Palette, Leaf, Factory, Truck, Mail, Instagram as InstagramIcon } from 'lucide-react';
 
-function App() {
+function HomePage() {
   return (
     <>
       <SEO />
@@ -23,7 +25,7 @@ function App() {
         <img 
           src="/alma_lg.png" 
           alt="Alma Goiana Logo" 
-          className="mx-auto mb-8 h-16"
+          className="mx-auto mb-16 h-32 animate-float"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = `data:image/svg+xml;base64,${btoa(`
@@ -154,23 +156,42 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Redes Sociais</h4>
               <a 
-                href="https://instagram.com/almagoiana"
+                href="https://www.instagram.com/almagoianapresentes/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
               >
-                <Instagram className="w-4 h-4" />
-                @almagoiana
+                <InstagramIcon className="w-4 h-4" />
+                @almagoianapresentes
               </a>
             </div>
           </div>
           
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Alma Goiana. Todos os direitos reservados.</p>
+          <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
+            <p>
+              &copy; {new Date().getFullYear()} <span className="text-white font-semibold">Alma Goiana</span> ∴ 
+              <br className="sm:hidden" />
+              Desenvolvido pelo <span className="text-white font-semibold">Protocolo NΞØ</span>.
+              <br />
+              Todos os direitos reservados.
+            </p>
           </div>
         </div>
       </footer>
 
       <FloatingWhatsApp />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/produto/:slug" element={<ProductPage />} />
+      </Routes>
+    </Router>
   );
 }
 

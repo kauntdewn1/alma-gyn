@@ -57,4 +57,18 @@
   .pill {
     @apply inline-block px-2 py-1 text-xs font-medium bg-[var(--bege)] text-[var(--ink)] rounded-full;
   }
+  
+  /* Animação flutuante para a logo */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
 }
