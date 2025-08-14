@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Instagram, Mail } from 'lucide-react';
-import { produtos } from '../components/ProductGrid';
+import { produtos } from '../data/products';
 
 export function ProductPage() {
   const { slug } = useParams<{ slug: string }>();

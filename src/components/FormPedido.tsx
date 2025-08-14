@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { produtos } from '../data/products';
 
 export function FormPedido() {
   const [formData, setFormData] = useState({
@@ -81,6 +82,3 @@ Personalização: ${formData.personalizacao}`;
     </div>
   );
 }
-
-// Import produtos for the select options
-import { produtos } from './ProductGrid';
