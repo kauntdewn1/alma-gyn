@@ -1,10 +1,16 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Instagram, Mail } from 'lucide-react';
 import { produtos } from '../data/products';
+import { SEO } from '../SEO';
 
 export function ProductPage() {
   const { slug } = useParams<{ slug: string }>();
   const produto = produtos.find(p => p.slug === slug);
+
+  // SEO específico para cada produto
+  const seoTitle = produto ? `${produto.nome} Personalizado em Goiânia | Alma Goiana` : 'Produto não encontrado';
+  const seoDescription = produto ? `${produto.descricao} Personalização disponível com R$ 10,00 por letra. Enviamos de Goiânia para todo o Brasil.` : 'Produto não encontrado';
+  const seoPath = produto ? `/produto/${produto.slug}` : '/produto/nao-encontrado';
 
   if (!produto) {
     return (
@@ -22,6 +28,13 @@ export function ProductPage() {
 
   return (
     <>
+      <SEO 
+        title={seoTitle}
+        description={seoDescription}
+        path={seoPath}
+        ogImage={produto?.img}
+      />
+      
       {/* Breadcrumb */}
       <div className="container-page py-4">
         <nav className="flex items-center gap-2 text-sm text-[var(--muted)]">

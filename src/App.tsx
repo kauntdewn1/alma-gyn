@@ -11,7 +11,7 @@ import { Palette, Leaf, Factory, Truck, Mail, Instagram as InstagramIcon } from 
 function HomePage() {
   return (
     <>
-      <SEO />
+      <SEO path="/" />
       
       {/* PIX Top Bar - promoção não ativa no momento */} 
       {/* <div className="bg-[var(--bege)] text-[var(--ink)] py-2">
