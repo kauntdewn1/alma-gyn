@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SEO } from './SEO';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
-import { CategoriesRail } from './components/CategoriesRail';
 import { CollectionsGrid } from './components/CollectionsGrid';
 import { ProductGrid } from './components/ProductGrid';
 import { FormPedido } from './components/FormPedido';
+import { CategoriesRail } from './components/CategoriesRail';
 import { ProductPage } from './pages/ProductPage';
 import { Palette, Leaf, Factory, Truck, Mail, Instagram as InstagramIcon } from 'lucide-react';
 
@@ -21,45 +21,91 @@ function HomePage() {
       </div> */}
 
       {/* Hero Section */}
-      <section className="container-page py-16 text-center">
-        <img 
-          src="/alma_lg.png" 
-          alt="Alma Goiana Logo" 
-          className="mx-auto mb-8 sm:mb-6 sm:h-6 2xl:h-64 animate-float"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = `data:image/svg+xml;base64,${btoa(`
-              <svg width="200" height="64" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="64" fill="#D9C8B6"/>
-                <text x="100" y="40" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#111">ALMA GOIANA</text>
-              </svg>
-            `)}`;
-          }}
-        />
-        <h1 className="heading-hero mb-6">
-          Presentes Únicos<br />
-          <span className="text-[var(--muted)]">Feitos com Amor</span>
-        </h1>
-        <p className="text-xl text-[var(--muted)] mb-8 max-w-3xl mx-auto">
-          Produtos artesanais em sintético com personalização exclusiva. 
-          Transformamos momentos especiais em presentes inesquecíveis.
-        </p>
-        
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <span className="chip">✨ Personalização única</span>
-          <span className="chip">🏭 Produção artesanal</span>
-          <span className="chip">🌱 Materiais sustentáveis</span>
-          <span className="chip">🚚 Entrega em todo Brasil</span>
+      <section className="w-full py-20 sm:py-24 lg:py-32 text-center relative overflow-hidden" style={{
+        background: `
+          linear-gradient(135deg, 
+            rgba(220, 193, 165, 0.3) 0%, 
+            rgba(232, 213, 192, 0.25) 25%, 
+            rgba(212, 184, 154, 0.35) 50%, 
+            rgba(220, 193, 165, 0.3) 75%, 
+            rgba(232, 213, 192, 0.25) 100%
+          )
+        `
+      }}>
+        {/* Elementos decorativos de fundo */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
         </div>
         
-        <a href="#produtos" className="btn-primary text-lg">
-          Personalize agora
-        </a>
+        <div className="container-page relative z-10 max-w-5xl mx-auto">
+          {/* Logo com animação aprimorada */}
+          <div className="mb-12 sm:mb-16">
+            <img 
+              src="/alma_lg.png" 
+              alt="Alma Goiana Logo" 
+              className="mx-auto mb-8 sm:mb-6 sm:h-6 2xl:h-64 animate-float drop-shadow-lg"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = `data:image/svg+xml;base64,${btoa(`
+                  <svg width="200" height="64" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="64" fill="#D9C8B6"/>
+                    <text x="100" y="40" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#111">ALMA GOIANA</text>
+                  </svg>
+                `)}`;
+              }}
+            />
+          </div>
+
+          {/* Título principal com melhor tipografia */}
+          <div className="mb-8 sm:mb-12 animate-fade-in-up">
+            <h1 className="heading-hero mb-4 sm:mb-6 leading-tight">
+              <span className="block text-[var(--ink)]">Presentes Únicos</span>
+              <span className="block text-[var(--muted)] font-light">Feitos com Amor</span>
+            </h1>
+            
+            {/* Linha decorativa */}
+            <div className="w-24 h-1 bg-gradient-to-r from-[var(--bege)] to-[var(--line)] mx-auto rounded-full mb-6"></div>
+            
+            <p className="text-lg sm:text-xl lg:text-2xl text-[var(--muted)] max-w-4xl mx-auto text-center">
+              <strong>Produtos artesanais</strong> em sintético com <strong>personalização exclusiva</strong>. 
+              <br className="hidden sm:block" />
+              Transformamos <strong>momentos especiais</strong> em <strong>presentes inesquecíveis</strong>.
+            </p>
+          </div>
+          
+          {/* CTA aprimorado com elementos visuais */}
+          <div className="space-y-6 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+            <div className="relative">
+              <a href="#produtos" className="btn-primary-enhanced bg-green-500 text-lg sm:text-xl px-10 sm:px-16 py-5 sm:py-6 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group">
+                <span className="relative z-10">Personalize agora</span>
+                <div className="absolute inset-0 bg-green-500/90 from-[var(--bege)]/10 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </a>
+              
+              {/* Elementos decorativos ao redor do botão */}
+              <div className="absolute -top-2 -left-2 w-4 h-4 bg-[var(--bege)] rounded-full opacity-60 animate-pulse"></div>
+              <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-[var(--line)] rounded-full opacity-60 animate-pulse" style={{animationDelay: '1s'}}></div>
+            </div>
+            
+            <div className="text-center space-y-2">
+              <p className="text-sm text-[var(--muted)] opacity-80 font-medium">
+                ✨ Comece sua jornada personalizada hoje
+              </p>
+              <div className="flex items-center justify-center gap-2 text-xs text-[var(--muted)] opacity-60">
+                <span className="w-2 h-2 bg-[var(--bege)] rounded-full"></span>
+                <span>100% artesanal</span>
+                <span className="w-2 h-2 bg-[var(--bege)] rounded-full"></span>
+                <span>Entrega rápida</span>
+                <span className="w-2 h-2 bg-[var(--bege)] rounded-full"></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <CategoriesRail />
-      <CollectionsGrid />
       <ProductGrid />
+      <CollectionsGrid />
 
       {/* Why Choose Section */}
       <section className="container-page py-16">
@@ -145,11 +191,11 @@ function HomePage() {
                   📱 (62) 99388-1515
                 </a>
                 <a 
-                  href="mailto:contato@almagoiana.com.br"
+                  href="mailto:almapresentes.mkt@gmail.com"
                   className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  contato@almagoiana.com.br
+                  almapresentes.mkt@gmail.com
                 </a>
               </div>
             </div>

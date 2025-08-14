@@ -9,11 +9,23 @@ const categories = [
 
 export function CategoriesRail() {
   return (
-    <div className="container-page py-8">
-      <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 px-4 sm:gap-6 sm:justify-center sm:px-0">
+    <section className="container-page py-8">
+      {/* Header compacto */}
+      <div className="text-center mb-6">
+        <h2 className="text-lg sm:text-xl font-semibold text-[var(--ink)] mb-2">
+          Filtrar por categoria
+        </h2>
+      </div>
+
+      {/* Filtros compactos */}
+      <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
         {categories.map((category) => (
-          <div key={category.nome} className="flex flex-col items-center min-w-fit shrink-0">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gray-200 border-2 border-white shadow-sm overflow-hidden mb-2">
+          <button
+            key={category.nome}
+            className="filter-chip group"
+            onClick={() => console.log(`Filtro: ${category.nome}`)}
+          >
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden mr-2 flex-shrink-0">
               <img 
                 src={category.img} 
                 alt={category.nome}
@@ -21,18 +33,20 @@ export function CategoriesRail() {
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = `data:image/svg+xml;base64,${btoa(`
-                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="64" height="64" fill="#D9C8B6"/>
-                      <text x="32" y="38" text-anchor="middle" font-family="Arial" font-size="10" fill="#111">${category.nome[0]}</text>
+                    <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="40" height="40" fill="#F3F4F6"/>
+                      <text x="20" y="25" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#6B7280">${category.nome[0]}</text>
                     </svg>
                   `)}`;
                 }}
               />
             </div>
-            <span className="text-xs sm:text-sm font-medium text-center whitespace-nowrap">{category.nome}</span>
-          </div>
+            <span className="text-sm font-medium text-[var(--muted)] group-hover:text-[var(--ink)] whitespace-nowrap">
+              {category.nome}
+            </span>
+          </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

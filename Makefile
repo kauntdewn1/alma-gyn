@@ -22,7 +22,11 @@ help:
 	@echo "  lint         - Executa o linter ESLint"
 	@echo "  lint-fix     - Corrige automaticamente problemas do linter"
 	@echo "  clean        - Remove arquivos de build e node_modules"
-	@echo "  deploy       - Constrói e faz deploy para Firebase"
+	@echo "  deploy       - Constrói e faz deploy para Netlify"
+	@echo "  deploy-preview - Deploy de preview (sem produção)"
+	@echo "  netlify-status - Verifica status do Netlify"
+	@echo "  netlify-login  - Login no Netlify"
+	@echo "  netlify-logout - Logout do Netlify"
 	@echo "  setup        - Configuração inicial do projeto"
 	@echo "  test         - Executa testes (quando implementados)"
 	@echo "  format       - Formata o código com Prettier (quando implementado)"
@@ -80,8 +84,28 @@ clean-all: clean
 
 # Deploy
 deploy: build
-	@echo "Fazendo deploy para Firebase..."
-	npm run deploy
+	@echo "Fazendo deploy para Netlify..."
+	netlify deploy --prod --dir=dist
+
+# Deploy de preview (sem produção)
+deploy-preview: build
+	@echo "Fazendo deploy de preview para Netlify..."
+	netlify deploy --dir=dist
+
+# Status do Netlify
+netlify-status:
+	@echo "Verificando status do Netlify..."
+	netlify status
+
+# Login no Netlify
+netlify-login:
+	@echo "Fazendo login no Netlify..."
+	netlify login
+
+# Logout do Netlify
+netlify-logout:
+	@echo "Fazendo logout do Netlify..."
+	netlify logout
 
 # Setup inicial do projeto
 setup: install

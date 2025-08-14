@@ -15,6 +15,11 @@
     background-color: var(--bg);
     color: var(--ink);
   }
+  
+  /* Garantir que seções com background personalizado tenham prioridade */
+  section.leather-bg {
+    background-color: transparent !important;
+  }
 }
 
 @layer components {
@@ -23,11 +28,11 @@
   }
   
   .heading-hero {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight;
   }
   
   .heading-sec {
-    @apply text-2xl md:text-3xl font-bold;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
   }
   
   .chip {
@@ -70,5 +75,174 @@
   
   .animate-float {
     animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Animação de entrada para elementos */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  /* Animação de escala para chips */
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+  
+  /* Melhorias na tipografia */
+  .heading-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight;
+  }
+  
+  .heading-sec {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
+  }
+  
+  .chip-enhanced {
+    @apply inline-flex items-center gap-2 px-4 py-3 rounded-full text-sm font-medium bg-white/90 backdrop-blur-sm border border-white/20 text-[var(--muted)] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-white;
+  }
+  
+  .chip-icon {
+    @apply text-lg opacity-80 group-hover:opacity-100 transition-opacity duration-300;
+  }
+  
+  .chip-text {
+    @apply font-medium;
+  }
+  
+  /* Botão primário aprimorado */
+  .btn-primary-enhanced {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 bg-gradient-to-r from-[var(--ink)] to-[var(--muted)] text-white hover:from-[var(--muted)] hover:to-[var(--ink)] focus:ring-[var(--bege)] shadow-lg hover:shadow-xl;
+  }
+  
+  /* Sombra 3D para botões */
+  .shadow-3xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Animação de pulso aprimorada */
+  @keyframes enhancedPulse {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+  
+  .animate-pulse {
+    animation: enhancedPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Hover aprimorado para chips */
+  .chip-enhanced:hover {
+    transform: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Transição suave para todos os elementos */
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  
+  /* Linha decorativa com gradiente */
+  .decorative-line {
+    @apply w-24 h-1 bg-gradient-to-r from-[var(--bege)] to-[var(--line)] mx-auto rounded-full;
+  }
+  
+  /* Elementos decorativos de fundo */
+  .hero-decoration {
+    @apply absolute w-80 h-80 bg-white/10 rounded-full blur-3xl;
+  }
+  
+  /* Background de couro com textura */
+  .leather-bg {
+    background: 
+      linear-gradient(135deg, 
+        rgba(220, 193, 165, 0.8) 0%, 
+        rgba(232, 213, 192, 0.7) 25%, 
+        rgba(212, 184, 154, 0.9) 50%, 
+        rgba(220, 193, 165, 0.8) 75%, 
+        rgba(232, 213, 192, 0.7) 100%
+      );
+    position: relative;
+    z-index: 1;
+  }
+  
+  .leather-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 6px,
+        rgba(180, 150, 120, 0.2) 6px,
+        rgba(180, 150, 120, 0.2) 12px
+      );
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  /* Hover sutil para os cards */
+  .info-card:hover {
+    @apply shadow-xl;
+    border-color: rgba(220, 193, 165, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  /* Remover classes antigas dos chips */
+  .chip-enhanced,
+  .chip-icon,
+  .chip-text {
+    @apply hidden;
+  }
+
+  /* Filtros compactos */
+  .filter-chip {
+    @apply flex items-center px-3 py-2 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  .filter-chip:hover {
+    border-color: rgba(220, 193, 165, 0.3);
+    background-color: rgba(220, 193, 165, 0.05);
+  }
+  
+  .filter-chip:focus {
+    @apply outline-none ring-2 ring-[var(--bege)] ring-opacity-50;
+  }
+  
+  .filter-chip.active {
+    background-color: rgba(220, 193, 165, 0.2);
+    border-color: var(--bege);
+    color: var(--ink);
   }
 }

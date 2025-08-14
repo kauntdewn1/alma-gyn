@@ -9,7 +9,7 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-const SITE = 'https://almagoiana.com'; // domínio oficial
+const SITE = 'alma-presentes-webapp.web.app'; // domínio oficial
 
 function absUrl(maybeRel?: string) {
   if (!maybeRel) return undefined;

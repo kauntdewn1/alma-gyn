@@ -134,7 +134,7 @@ export function ProductPage() {
                   Ver no Instagram
                 </a>
                 <a 
-                  href="mailto:contato@almagoiana.com.br"
+                  href="mailto:almapresentes.mkt@gmail.com"
                   className="btn-ghost flex-1 flex items-center justify-center gap-2"
                 >
                   <Mail className="w-4 h-4" />
