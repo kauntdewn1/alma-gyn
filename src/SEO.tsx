@@ -8,10 +8,10 @@ interface SEOProps {
 }
 
 export function SEO({ 
-  title = 'Alma Goiana - Presentes Personalizados em Couro',
-  description = 'Presentes personalizados em couro artesanal. Produtos únicos para viagem, escritório e casa com a qualidade Alma Goiana.',
+  title = 'Alma Goiana - Presentes Personalizados em Sintético',
+  description = 'Presentes personalizados em sintético. Produtos únicos para viagem, escritório e casa com a qualidade Alma Goiana.',
   ogImage = '/og/alma-og.png',
-  url = 'https://almagoiana.com.br'
+  url = 'https://almagoiana.com'
 }: SEOProps) {
   return (
     <Helmet>

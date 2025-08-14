@@ -1,14 +1,5 @@
 import { Link } from 'react-router-dom';
-
-interface Product {
-  nome: string;
-  preco: string;
-  img: string;
-  personalizacao: boolean;
-  slug: string;
-  descricao?: string;
-  caracteristicas?: string[];
-}
+import { Product } from '../types/product';
 
 interface ProductCardProps {
   produto: Product;
@@ -39,6 +30,18 @@ export function ProductCard({ produto }: ProductCardProps) {
       </div>
       <h3 className="font-semibold text-lg mb-1">{produto.nome}</h3>
       <p className="text-xl font-bold text-[var(--ink)]">{produto.preco}</p>
+      
+      {produto.personalizacao && (
+        <div className="text-sm text-[var(--muted)] mb-2">
+          <p className="font-medium">✨ Personalização disponível</p>
+          {produto.precoPersonalizacao && (
+            <p className="text-xs">{produto.precoPersonalizacao}</p>
+          )}
+          {produto.coresMetal && produto.coresMetal.length > 0 && (
+            <p className="text-xs">Cor do metal: {produto.coresMetal.join(', ')}</p>
+          )}
+        </div>
+      )}
       
       <div className="flex gap-2 mt-4">
         <Link 

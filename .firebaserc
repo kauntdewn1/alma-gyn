@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "alma-presentes-webapp"
-  }
+    "default": "alma-presentes-webapp",
+    "alma-gyn": "alma-presentes-webapp"
+  },
+  "targets": {},
+  "etags": {}
 }

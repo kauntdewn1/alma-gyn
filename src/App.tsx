@@ -13,19 +13,19 @@ function HomePage() {
     <>
       <SEO />
       
-      {/* PIX Top Bar */}
-      <div className="bg-[var(--bege)] text-[var(--ink)] py-2">
+      {/* PIX Top Bar - promoção não ativa no momento */} 
+      {/* <div className="bg-[var(--bege)] text-[var(--ink)] py-2">
         <div className="container-page text-center">
           <p className="text-sm font-medium">🔥 10% de desconto no PIX | Frete grátis acima de R$ 150</p>
         </div>
-      </div>
+      </div> */}
 
       {/* Hero Section */}
       <section className="container-page py-16 text-center">
         <img 
           src="/alma_lg.png" 
           alt="Alma Goiana Logo" 
-          className="mx-auto mb-16 h-32 animate-float"
+          className="mx-auto mb-8 sm:mb-6 sm:h-6 2xl:h-64 animate-float"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = `data:image/svg+xml;base64,${btoa(`
@@ -41,7 +41,7 @@ function HomePage() {
           <span className="text-[var(--muted)]">Feitos com Amor</span>
         </h1>
         <p className="text-xl text-[var(--muted)] mb-8 max-w-3xl mx-auto">
-          Produtos artesanais em couro com personalização exclusiva. 
+          Produtos artesanais em sintético com personalização exclusiva. 
           Transformamos momentos especiais em presentes inesquecíveis.
         </p>
         
@@ -131,7 +131,7 @@ function HomePage() {
             <div>
               <h3 className="text-xl font-bold mb-4">Alma Goiana</h3>
               <p className="text-gray-300">
-                Presentes personalizados em couro artesanal. 
+                Presentes personalizados em sintético artesanal. 
                 Transformando momentos especiais em memórias eternas.
               </p>
             </div>

@@ -5,9 +5,9 @@
 :root {
   --bg: #F7F7F7;
   --ink: #111111;
-  --muted: #2B2B2B;
-  --bege: #D9C8B6;
-  --line: #e7e2db;
+  --muted: #3a3a3a;
+  --bege: #dcc1a5;
+  --line: #b4afa9;
 }
 
 @layer base {

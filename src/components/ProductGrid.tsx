@@ -1,15 +1,18 @@
 import { ProductCard } from './ProductCard';
+import { Product } from '../types/product';
 
-export const produtos = [
+export const produtos: Product[] = [
   { 
     nome: "Porta vinho", 
     preco: "R$ 75,00", 
     img: "/prod/porta_vinho.webp", 
     personalizacao: true,
     slug: "porta_vinho",
-    descricao: "Porta vinho artesanal em couro genuíno, perfeito para presentear ou para uso pessoal. Ideal para transportar sua garrafa favorita com estilo e elegância.",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Porta vinho artesanal em sintético, perfeito para presentear ou para uso pessoal. Ideal para transportar sua garrafa favorita com estilo e elegância.",
     caracteristicas: [
-      "Couro genuíno de alta qualidade",
+      "Sintético de alta qualidade",
       "Acabamento artesanal",
       "Personalização disponível",
       "Tamanho ideal para garrafas padrão"
@@ -21,24 +24,28 @@ export const produtos = [
     img: "/prod/necessaire_tur.webp", 
     personalizacao: true,
     slug: "necessaire_tur",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
     descricao: "Necessaire compacta e funcional, ideal para viagens e uso diário. Com múltiplos compartimentos para organizar seus itens essenciais.",
     caracteristicas: [
       "Design compacto e funcional",
       "Múltiplos compartimentos",
-      "Couro resistente e durável",
+      "Sintético resistente e durável",
       "Personalização disponível"
     ]
   },
   { 
     nome: "Porta passaporte duplo", 
     preco: "R$ 40,00", 
-    img: "/prod/porta_passaporte _duplo.webp", 
+    img: "/prod/porta_passaporte_duplo.webp", 
     personalizacao: true,
     slug: "porta_passaporte_duplo",
-    descricao: "Porta passaporte duplo em couro artesanal, perfeito para casais ou famílias que viajam juntas. Protege e organiza documentos importantes.",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Porta passaporte duplo em sintético, perfeito para casais ou famílias que viajam juntas. Protege e organiza documentos importantes.",
     caracteristicas: [
       "Compartimento duplo",
-      "Couro genuíno artesanal",
+      "Sintético artesanal",
       "Proteção para documentos",
       "Personalização disponível"
     ]
@@ -49,24 +56,26 @@ export const produtos = [
     img: "/prod/tag_mala_retangulo.webp", 
     personalizacao: true,
     slug: "tag_mala_retangulo",
-    descricao: "Tag de mala retangular personalizada, ideal para identificar suas bagagens com estilo. Feita em couro artesanal com acabamento premium.",
+    descricao: "Tag de mala retangular personalizada, ideal para identificar suas bagagens com estilo. Feita em sintético com acabamento premium.",
     caracteristicas: [
       "Design retangular elegante",
-      "Couro artesanal premium",
+      "Sintético premium",
       "Personalização disponível",
       "Ideal para identificação"
     ]
   },
   { 
     nome: "Porta óculos", 
-    preco: "R$ 75,00", 
+    preco: "R$ 45,00", 
     img: "/prod/porta_oculos.webp", 
     personalizacao: true,
     slug: "porta_oculos",
-    descricao: "Porta óculos em couro artesanal, protegendo seus óculos com estilo e sofisticação. Perfeito para presentear ou uso pessoal.",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Porta óculos em sintético, protegendo seus óculos com estilo e sofisticação. Perfeito para presentear ou uso pessoal.",
     caracteristicas: [
-      "Proteção premium para óculos",
-      "Couro genuíno artesanal",
+      "Proteção para óculos",
+      "Sintético premium",
       "Design elegante e sofisticado",
       "Personalização disponível"
     ]
@@ -77,11 +86,13 @@ export const produtos = [
     img: "/prod/necessaire_nina.webp", 
     personalizacao: true,
     slug: "necessaire_nina",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
     descricao: "Necessaire Nina, elegante e funcional, ideal para organizar seus itens de beleza e cuidados pessoais com estilo.",
     caracteristicas: [
       "Design elegante e feminino",
       "Organização funcional",
-      "Couro de alta qualidade",
+      "Sintético de alta qualidade",
       "Personalização disponível"
     ]
   },
@@ -91,10 +102,12 @@ export const produtos = [
     img: "/prod/lixeiras.webp", 
     personalizacao: true,
     slug: "lixeiras",
-    descricao: "Lixeiras artesanais em couro, combinando funcionalidade com design elegante. Perfeitas para escritório ou ambiente doméstico.",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Lixeiras artesanais em sintético, combinando funcionalidade com design elegante. Perfeitas para escritório ou ambiente doméstico.",
     caracteristicas: [
       "Design funcional e elegante",
-      "Couro artesanal resistente",
+      "Sintético resistente",
       "Ideal para escritório",
       "Personalização disponível"
     ]
@@ -105,10 +118,12 @@ export const produtos = [
     img: "/prod/chaveiro_slim.webp", 
     personalizacao: true,
     slug: "chaveiro_slim",
-    descricao: "Chaveiro slim em couro artesanal, design minimalista e elegante. Perfeito para organizar suas chaves com estilo.",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Chaveiro slim em sintético, design minimalista e elegante. Perfeito para organizar suas chaves com estilo.",
     caracteristicas: [
       "Design slim e minimalista",
-      "Couro artesanal elegante",
+      "Sintético elegante",
       "Organização funcional",
       "Personalização disponível"
     ]
@@ -119,10 +134,12 @@ export const produtos = [
     img: "/prod/chaveiro_coracao.webp", 
     personalizacao: true,
     slug: "chaveiro_coracao",
-    descricao: "Chaveiro em formato de coração, feito em couro artesanal. Ideal para presentear ou para quem ama detalhes românticos.",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Chaveiro em formato de coração, feito em sintético. Ideal para presentear ou para quem ama detalhes românticos.",
     caracteristicas: [
       "Formato de coração romântico",
-      "Couro artesanal premium",
+      "Sintético premium",
       "Ideal para presentes",
       "Personalização disponível"
     ]
@@ -133,10 +150,12 @@ export const produtos = [
     img: "/prod/carteira_rb.webp", 
     personalizacao: true,
     slug: "carteira_rb",
-    descricao: "Carteira RB compacta e funcional, feita em couro artesanal. Perfeita para organizar documentos e cartões com estilo.",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Carteira RB compacta e funcional, feita em sintético. Perfeita para organizar documentos e cartões com estilo.",
     caracteristicas: [
       "Design compacto e funcional",
-      "Couro artesanal de qualidade",
+      "Sintético de qualidade",
       "Organização eficiente",
       "Personalização disponível"
     ]
@@ -147,6 +166,8 @@ export const produtos = [
     img: "/prod/necessaire_maletinha.webp", 
     personalizacao: true,
     slug: "necessaire_maletinha",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
     descricao: "Necessaire Maletinha premium, com design exclusivo e múltiplos compartimentos. Ideal para viagens longas e organização profissional.",
     caracteristicas: [
       "Design premium exclusivo",
@@ -161,10 +182,12 @@ export const produtos = [
     img: "/prod/necessaire_travel.webp", 
     personalizacao: true,
     slug: "necessaire_travel",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
     descricao: "Necessaire Travel, perfeita para suas aventuras. Design funcional e resistente, ideal para viagens e uso diário.",
     caracteristicas: [
       "Design funcional para viagens",
-      "Couro resistente e durável",
+      "Sintético resistente e durável",
       "Ideal para aventuras",
       "Personalização disponível"
     ]
