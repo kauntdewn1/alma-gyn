@@ -44,7 +44,7 @@ function HomePage() {
             <img 
               src="/alma_lg.png" 
               alt="Alma Goiana Logo" 
-              className="mx-auto mb-8 sm:mb-6 sm:h-6 2xl:h-64 animate-float drop-shadow-lg"
+              className="mx-auto mb-8 sm:mb-6 h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 2xl:h-36 animate-float drop-shadow-lg"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = `data:image/svg+xml;base64,${btoa(`
