@@ -193,4 +193,68 @@ export const produtos: Product[] = [
       "Personalização disponível"
     ]
   },
+  { 
+    nome: "Porta Treco", 
+    preco: "R$ 38,00", 
+    img: "/prod/porta_treco.webp", 
+    personalizacao: true,
+    slug: "porta_treco",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Porta treco funcional e organizado, ideal para guardar pequenos objetos e acessórios. Feito em sintético com acabamento artesanal.",
+    caracteristicas: [
+      "Organização funcional",
+      "Sintético artesanal",
+      "Ideal para pequenos objetos",
+      "Personalização disponível"
+    ]
+  },
+  { 
+    nome: "Porta Caneta", 
+    preco: "R$ 25,00", 
+    img: "/prod/porta_caneta.webp", 
+    personalizacao: true,
+    slug: "porta_caneta",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Porta caneta elegante e funcional, perfeito para organizar sua mesa de trabalho ou escritório com estilo.",
+    caracteristicas: [
+      "Design elegante e funcional",
+      "Sintético premium",
+      "Ideal para escritório",
+      "Personalização disponível"
+    ]
+  },
+  { 
+    nome: "Mousepad", 
+    preco: "R$ 42,00", 
+    img: "/prod/mousepad.webp", 
+    personalizacao: true,
+    slug: "mousepad",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Mousepad personalizado em sintético, combinando funcionalidade com design exclusivo. Perfeito para seu setup de trabalho ou gaming.",
+    caracteristicas: [
+      "Funcionalidade premium",
+      "Sintético resistente",
+      "Design exclusivo",
+      "Personalização disponível"
+    ]
+  },
+  { 
+    nome: "Porta Copo Individual", 
+    preco: "R$ 28,00", 
+    img: "/prod/porta_copo_individual.webp", 
+    personalizacao: true,
+    slug: "porta_copo_individual",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Porta copo individual em sintético, ideal para organizar sua mesa e manter o ambiente sempre arrumado com estilo.",
+    caracteristicas: [
+      "Organização individual",
+      "Sintético artesanal",
+      "Ideal para mesa de trabalho",
+      "Personalização disponível"
+    ]
+  },
 ];
