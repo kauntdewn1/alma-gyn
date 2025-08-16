@@ -195,7 +195,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Porta Treco", 
-    preco: "R$ 38,00", 
+    preco: "R$ 32,00", 
     img: "/prod/porta_treco.webp", 
     personalizacao: true,
     slug: "porta_treco",
@@ -211,7 +211,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Porta Caneta", 
-    preco: "R$ 25,00", 
+    preco: "R$ 32,00", 
     img: "/prod/porta_caneta.webp", 
     personalizacao: true,
     slug: "porta_caneta",
@@ -227,7 +227,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Mousepad", 
-    preco: "R$ 42,00", 
+    preco: "R$ 32,00", 
     img: "/prod/mousepad.webp", 
     personalizacao: true,
     slug: "mousepad",
