@@ -257,4 +257,20 @@ export const produtos: Product[] = [
       "Personalização disponível"
     ]
   },
+  { 
+    nome: "Passaporte único", 
+    preco: "R$ 35,00", 
+    img: "/prod/passaporte_unico.webp", 
+    personalizacao: true,
+    slug: "passaporte_unico",
+    precoPersonalizacao: "R$ 10,00 por letra",
+    coresMetal: ["Prata"],
+    descricao: "Porta passaporte compacto e funcional, ideal para viagens e até uso diário. Com encaixes para fixação de seu passaporte com segurança e proteção.",
+    caracteristicas: [
+      "Design compacto e funcional",
+      "Múltiplos compartimentos",
+      "Sintético resistente e durável",
+      "Personalização disponível"
+    ]
+  },
 ];
