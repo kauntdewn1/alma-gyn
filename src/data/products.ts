@@ -3,7 +3,7 @@ import { Product } from '../types/product';
 export const produtos: Product[] = [
   { 
     nome: "Porta vinho", 
-    preco: "R$ 75,00", 
+    preco: "R$ 95,00", 
     img: "/prod/porta_vinho.webp", 
     personalizacao: true,
     slug: "porta_vinho",
@@ -19,7 +19,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Necessaire Tur", 
-    preco: "R$ 48,00", 
+    preco: "R$ 68,00", 
     img: "/prod/necessaire_tur.webp", 
     personalizacao: true,
     slug: "necessaire_tur",
@@ -35,7 +35,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Porta passaporte duplo", 
-    preco: "R$ 40,00", 
+    preco: "R$ 43,00", 
     img: "/prod/porta_passaporte_duplo.webp", 
     personalizacao: true,
     slug: "porta_passaporte_duplo",
@@ -51,7 +51,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Tag de mala retângulo", 
-    preco: "R$ 32,00", 
+    preco: "R$ 37,00", 
     img: "/prod/tag_mala_retangulo.webp", 
     personalizacao: true,
     slug: "tag_mala_retangulo",
@@ -67,7 +67,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Porta óculos", 
-    preco: "R$ 45,00", 
+    preco: "R$ 65,00", 
     img: "/prod/porta_oculos.webp", 
     personalizacao: true,
     slug: "porta_oculos",
@@ -83,7 +83,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Necessaire Nina", 
-    preco: "R$ 55,00", 
+    preco: "R$ 89,00", 
     img: "/prod/necessaire_nina.webp", 
     personalizacao: true,
     slug: "necessaire_nina",
@@ -99,7 +99,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Lixeiras", 
-    preco: "R$ 60,00", 
+    preco: "R$ 84,00", 
     img: "/prod/lixeiras.webp", 
     personalizacao: true,
     slug: "lixeiras",
@@ -115,7 +115,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Chaveiro Slim", 
-    preco: "R$ 35,00", 
+    preco: "R$ 55,00", 
     img: "/prod/chaveiro_slim.webp", 
     personalizacao: true,
     slug: "chaveiro_slim",
@@ -131,7 +131,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Chaveiro Coração", 
-    preco: "R$ 35,00", 
+    preco: "R$ 55,00", 
     img: "/prod/chaveiro_coracao.webp", 
     personalizacao: true,
     slug: "chaveiro_coracao",
@@ -147,7 +147,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Carteira RB", 
-    preco: "R$ 32,00", 
+    preco: "R$ 40,00", 
     img: "/prod/carteira_rb.webp", 
     personalizacao: true,
     slug: "carteira_rb",
@@ -163,7 +163,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Necessaire Maletinha", 
-    preco: "R$ 110,00", 
+    preco: "R$ 120,00", 
     img: "/prod/necessaire_maletinha.webp", 
     personalizacao: true,
     slug: "necessaire_maletinha",
@@ -195,7 +195,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Porta Treco", 
-    preco: "R$ 32,00", 
+    preco: "R$ 56,00", 
     img: "/prod/porta_treco.webp", 
     personalizacao: true,
     slug: "porta_treco",
@@ -211,7 +211,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Porta Caneta", 
-    preco: "R$ 32,00", 
+    preco: "R$ 46,00", 
     img: "/prod/porta_caneta.webp", 
     personalizacao: true,
     slug: "porta_caneta",
@@ -227,7 +227,7 @@ export const produtos: Product[] = [
   },
   { 
     nome: "Mousepad", 
-    preco: "R$ 32,00", 
+    preco: "R$ 43,00", 
     img: "/prod/mousepad.webp", 
     personalizacao: true,
     slug: "mousepad",
