@@ -1,6 +1,6 @@
 [build]
-  # Comando para build
-  command = "npm run build"
+  # Comando para build (instala devDependencies primeiro)
+  command = "npm ci --include=dev && npm run build"
   
   # Pasta de saída
   publish = "dist"
